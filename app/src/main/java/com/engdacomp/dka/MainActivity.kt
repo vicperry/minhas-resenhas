@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.engdacomp.dka.databinding.ActivityMainBinding
 import com.engdacomp.dka.model.Resenha
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity() {
         binding.listarBtn.setOnClickListener{
             var intent = Intent(applicationContext, ListaActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.logoutBtn.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
     }

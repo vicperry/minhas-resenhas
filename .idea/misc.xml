@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_item.xml" value="0.25" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_list.xml" value="0.121875" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_lista.xml" value="0.19298245614035087" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_login.xml" value="0.265625" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_login_activity.xml" value="0.22" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/activity_splash.xml" value="0.265625" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/edit_cadastro.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/lista.xml" value="0.121875" />
         <entry key="..\:/Users/VIK/AndroidStudioProjects/DKA/app/src/main/res/layout/lista_item.xml" value="0.25" />

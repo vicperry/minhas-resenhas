@@ -1,5 +1,6 @@
 package com.engdacomp.dka
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,10 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.engdacomp.dka.adapter.ResenhaAdapter
 import com.engdacomp.dka.databinding.ActivityListaBinding
 import com.engdacomp.dka.model.Resenha
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.*
 import com.google.firebase.ktx.Firebase
-import java.util.*
 
 class ListaActivity : AppCompatActivity() {
     private val binding by lazy {
@@ -24,6 +23,8 @@ class ListaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        Toast.makeText(this, "Toque em uma resenha para editá-la ou excluí-la.", Toast.LENGTH_SHORT).show()
         rv()
         buscarTodos()
     }
@@ -52,16 +53,11 @@ class ListaActivity : AppCompatActivity() {
         rv.itemAnimator = DefaultItemAnimator()
         rv.adapter = adapter
         adapter.ClicaNoItem = {
-            Toast.makeText(this, "Clique", Toast.LENGTH_SHORT).show()
-            /*val i = Intent(
-                this,
-                DetalheResenhaActivity::class.java
-            ).apply {
-                putExtra("PRODUTO_ID", it.id)
+            val intent = Intent(this, ItemActivity::class.java)
+                .apply { putExtra("RESENHA_ID", it.id)
             }
 
-
-            startActivity(i)*/
+            startActivity(intent)
         }
     }
 
